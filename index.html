@@ -13,15 +13,16 @@
     background: radial-gradient(circle at center, #111 0%, #000 100%);
   }
 
-  /* Parallax banner on top */
-  .parallax {
-    background-image: url('assets/main-parallex.webp');
-    height: 40vh; /* height of the parallax section */
-    background-attachment: fixed;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+/* Parallax banner fixed to bottom */
+.parallax {
+  background-image: url('assets/main-parallex.webp');
+  height: 40vh; /* height of the parallax section */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom; /* keep bottom edge in view */
+  background-origin: content-box;
+}
 
   /* Text area below */
   .content {
