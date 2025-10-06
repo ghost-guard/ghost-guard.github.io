@@ -3,52 +3,229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghost Guard</title>
-<style>
-  body {
-    font-family: system-ui, sans-serif;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    background: radial-gradient(circle at center, #111 0%, #000 100%);
-  }
+  <title>Ghost Detector</title>
+  <link rel="icon" type="image/webp" href="assets/app-icon.webp">
+  <style>
+    /* ---------- GENERAL ---------- */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-/* Parallax banner fixed to bottom */
-.parallax {
-  background-image: url('assets/main-parallex.webp');
-  height: 40vh; /* height of the parallax section */
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom; /* keep bottom edge in view */
-  background-origin: content-box;
+    h1, h2, h3 {
+      color: #00ff99;
+      text-align: center;
+    }
+
+    a {
+      color: #00ff99;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      height: 50vh;
+      background: url("assets/hero-parallex.webp") bottom center / cover fixed no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 40px;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin: 0;
+      text-shadow: 0 0 10px #00ff99;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    /* ---------- BUTTON ---------- */
+    .btn {
+      display: inline-block;
+      background-color: transparent;
+      border: 2px solid #00ff99;
+      color: #00ff99;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #00ff99;
+      color: #000;
+      box-shadow: 0 0 15px #00ff99;
+    }
+
+    /* ---------- IMAGES ---------- */
+    .tips-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+.tips-images img {
+  width: 32%;
+  max-width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ff99;
+  transition: transform 0.3s ease;
 }
 
-  /* Text area below */
-  .content {
-    margin-top: 3rem;
-    padding: 2rem;
-  }
+    .tips-images img:hover {
+      transform: scale(1.05);
+    }
 
-  h1 {
-    font-size: 2em;
-  }
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+      color: #888;
+      border-top: 1px solid #111;
+    }
 
-  a {
-    color: #9df;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+      .tips-images img {
+        width: 80%;
+        max-width: 300px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <div class="parallax"></div>
-  <div class="content">
-    <h1>👻 Ghost Guard</h1>
-    <p>Official developer website for Ghost Guard apps.</p>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Ghost Detector - Ghost Guard</h1>
+    <p>Entertainment? — or is something happening in the neighborhood…</p>
+    <!-- <a href="#" class="btn">Get it on Google Play</a> -->
   </div>
+
+  <!-- DESCRIPTION -->
+  <section id="description">
+    <h2>Uncover the Spirits of the Philippines</h2>
+    <p>
+      Step into the thrilling world of the unseen with <strong>Ghost Detector</strong> — your ultimate companion for exploring the paranormal! 
+      Is that a chill down your spine, or just the air conditioning? With this app, you’ll finally have a tool to test those spooky feelings.
+    </p>
+    <p>
+      Forget the generic ghouls – our app brings to life the rich, captivating, and sometimes terrifying creatures of Filipino folklore. 
+      Encounter legendary entities such as the shape-shifting Aswang, the mysterious Manananggal, the towering Kapre, and the mischievous Duwende. 
+      Each Mumu has a story waiting to be discovered.
+    </p>
+    <p>
+      <strong>Ghost Detector</strong> is not just about frights and fun — it’s also a journey into culture and heritage. 
+      Learn about the myths that shaped generations and explore the supernatural landscape of the Philippines.
+    </p>
+    <h3>Key Features:</h3>
+    <ul>
+      <li>Ghost Encyclopedia — Explore the legends of Filipino spirits.</li>
+      <li>Incident Log — Track your ghostly encounters.</li>
+      <li>Immersive Experience — Scary sounds and eerie visuals.</li>
+      <li>Filipino Heritage — Discover cultural myths and stories.</li>
+      <li>Tagalog Support — Authentic local feel with Mumu legends.</li>
+    </ul>
+  </section>
+
+  <!-- TIPS -->
+  <section id="tips" class="tips">
+    <h2>Keep Ghost Summoning Alive</h2>
+    <div class="tips-images">
+      <img src="assets/appinfo-tip.webp" alt="App Info Tip">
+      <img src="assets/app-notifications-tip.webp" alt="Notifications Tip">
+      <img src="assets/allow-alerts-tip.webp" alt="Allow Alerts Tip">
+    </div>
+    <p>
+      If the ghost doesn’t appear on time, you may need to allow the app to run in the background. 
+      Also, check that Ghost Notifications are allowed.
+    </p>
+    <h3>How to Fix:</h3>
+    <ul>
+       <b>Long-press the Ghost app icon → App info </b> <br/>
+       Or, go to Ghost App Settings → press "Allow Ghost Alerts"</li>
+      <li>Check Notifications settings</li>
+      <b>Find Battery / Power / Launch settings</b>
+      <li>Set to Unrestricted / No restrictions / Allow background activity</li>
+    </ul>
+    <h3>Phone-Specific Notes:</h3>
+    <ul>
+      <li><strong>Honor / Huawei:</strong> Disable “Manage automatically”, then enable Auto-launch, Secondary launch, Run in background</li>
+      <li><strong>Samsung:</strong> Battery → Unrestricted, remove from Sleeping apps</li>
+      <li><strong>Xiaomi / Redmi / Poco:</strong> Battery saver → No restrictions</li>
+      <li><strong>Oppo / Realme / OnePlus:</strong> Battery usage → Allow background activity</li>
+      <li><strong>Pixel / Stock Android:</strong> Battery → Unrestricted</li>
+    </ul>
+  </section>
+
+  <!-- STORY -->
+  <section id="story">
+    <h2>The Story Behind Ghost Detector</h2>
+    <p>
+      Ten years ago in Manila, while testing a car tracking device with a door sensor, strange things began happening.
+      The old unit’s clock was broken, yet the logs kept showing doors opening and closing at 2 AM and 5 AM — when nobody was in the office.
+    </p>
+    <p>
+      Our team became convinced it was a Mumu haunting the workplace. 
+      That’s when we joked about building a real “Ghost Tracker.”
+    </p>
+    <p>
+      It took ten years, but here we are — with <strong>Ghost Detector</strong>, finally ready to uncover what lurks beyond.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Ghost Detector — Dare to Discover the Mumu 👻
+  </footer>
+
+  <!-- SCRIPT (Fade-in on scroll) -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < trigger) section.classList.add("visible");
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
 </body>
 </html>
