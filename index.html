@@ -4,29 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ghost Guard</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      text-align: center;
-      margin-top: 10%;
-      color: #fff;
-      background: radial-gradient(circle at center, #111 0%, #000 100%);
-    }
-    h1 {
-      font-size: 2em;
-    }
-    a {
-      color: #9df;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    background: radial-gradient(circle at center, #111 0%, #000 100%);
+  }
+
+  /* Parallax banner on top */
+  .parallax {
+    background-image: url('assets/main-parallex.webp');
+    height: 60vh; /* height of the parallax section */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Text area below */
+  .content {
+    margin-top: 3rem;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  a {
+    color: #9df;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body>
-  <h1>👻 Ghost Guard</h1>
-  <p>Official developer website for Ghost Guard apps.</p>
-  <img src="assets/main-parallex.webp" alt="Main parallex">
+  <div class="parallax"></div>
+  <div class="content">
+    <h1>👻 Ghost Guard</h1>
+    <p>Official developer website for Ghost Guard apps.</p>
+  </div>
 </body>
 </html>
