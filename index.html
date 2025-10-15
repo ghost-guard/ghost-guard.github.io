@@ -159,6 +159,7 @@
     <p>Entertainment? — or is something happening in the neighborhood…</p>
     <!-- <a href="#" class="btn">Get it on Google Play</a> -->
   </div>
+  <audio id="ghostSound" src="assets/ghost-sound.mp3" preload="auto"></audio>
 
   <!-- DESCRIPTION -->
   <section id="description">
@@ -261,5 +262,13 @@ Or, go to Ghost App Settings → press "Allow Ghost Alerts"</p>
     window.addEventListener("scroll", revealOnScroll);
     window.addEventListener("load", revealOnScroll);
   </script>
+  <script>
+  window.addEventListener('load', () => {
+    const sound = document.getElementById('ghostSound');
+    sound.play().catch(() => {
+      console.log("Autoplay blocked, user interaction required.");
+    });
+  });
+</script>
 </body>
 </html>
