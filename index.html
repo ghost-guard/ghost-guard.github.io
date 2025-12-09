@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- RESET & BASIC SETUP --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Deep Mystical Blue/Black */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* --- CONTAINER FOR THE CARDS --- */
+        .container {
+            text-align: center;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: #a8b2d1;
+        }
+
+        /* --- CARD GRID LAYOUT --- */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 30px;
+            padding: 10px;
+        }
+
+        /* --- INDIVIDUAL CARD STYLE --- */
+        .card {
+            background: rgba(255, 255, 255, 0.05); /* Very see-through */
+            backdrop-filter: blur(10px); /* Blurry glass effect */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Hover effect: Lift up */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* --- CARD CONTENT --- */
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #d1d5db;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* --- BUTTON STYLE --- */
+        .btn {
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Specific Button Colors (Optional) */
+        .btn-ghost {
+            background: linear-gradient(90deg, #434343 0%, #000000 100%);
+            border: 1px solid #555;
+        }
+        
+        .btn-astro {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            border: 1px solid #666;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+        
+        footer a {
+            color: #888;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Tanod Apps</h1>
+            <p class="subtitle">Choose your experience below</p>
+        </header>
+
+        <div class="app-grid">
+            
+            <div class="card">
+                <div class="icon">👻</div>
+                <h2>Ghost Detector</h2>
+                <p class="description">
+                    Explore the paranormal. Use the radar to detect energy and analyze anomalies with our AI tools.
+                </p>
+                <a href="ghostdetector.html" class="btn btn-ghost">Open Ghost Detector</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">✨</div>
+                <h2>AstroDream</h2>
+                <p class="description">
+                    Unlock your destiny. Get accurate daily horoscopes based on planetary positions and interpret your dreams.
+                </p>
+                <a href="astrodream.html" class="btn btn-astro">Open AstroDream</a>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Tanod Studios. <a href="#">Privacy Policy</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
